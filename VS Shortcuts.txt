@@ -1,0 +1,25 @@
+Visual Studio Shortcuts
+CSS & HTML
+
+! = HTML Skeleton
+.name = creates div with class name
+#name = creates div with id name
+tagType = creates element with tag
+ctrl + / = comment
+name*2 = Will create two divs
+
+div = block level
+span = inline level
+name * {} = css applies to all in name
+
+.name.name2 => class="name name2"
+loremXX = xx is a number
+
+** To remove Source Control from project
+Go to SC menu
+Right click to show SC
+Right click, select remove
+
+** To make multiple containers
+.className{innerHtml $}*3
+Then press enter
