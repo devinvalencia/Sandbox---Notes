@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+  function greet() {
+  return "yes";
+  }
+
+  let tester = function() {
+    return 1 + 1;
+  }; 
+  /*
+  This is function expression, variable w. anon function, notice semiCol at end bracket, this is different than declaration.
+  */
+
+  // IIFE ( Imidiately invoked func expression) declared and called at same time
+
+  ( function (param1_ref) {
+    console.log(`Test out this ${param1_ref}`) // Template String, no concatination required
+  })("param1_value");
+  // Looks like regular function in parenthesis + parameters and semi colon
+  // internal parameters is just how function refers to what was passed to it from external parameters
+
+  
+
+  continue; // In for loop will start the next iteration of loop without going through rest of current code block
+
+  break; // Breaks out of loop, bad design
+
+  arrName.forEach(function(element/* Current iterator declared here*, can also accept index and array*/){
+    console.log(element);
+  });
+  // requires call back function, but does same thing for loop when going through arrays
+
+  //Map
+  const arr = [
+    {id: 1, name: "D"},
+    {id: 2, name: "V"}
+  ]
+
+  const ids = arr.map(function(iterator){
+    return iterator.id;
+  });
+  // Similiar to for each loop except returns attribute of object instead of whole object
+
+  let obj = 
+  {
+    firtname: "D",
+    lastname: "V"
+  }
+
+  // For In Loop
+  for (let key in obj){
+    console.log( `${key} : ${obj[key]}`);
+  }
+  // For each att in object, Key is the object attribute and it can be used to get that objects value
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

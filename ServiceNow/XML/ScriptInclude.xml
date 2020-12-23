@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2020-11-24 15:05:27">
+<sys_script_include action="INSERT_OR_UPDATE">
+<access>package_private</access>
+<active>true</active>
+<api_name>global.testInclude</api_name>
+<caller_access/>
+<client_callable>true</client_callable>
+<description>Restrict reference field selection to certain criteria</description>
+<name>testInclude</name>
+<script><![CDATA[// Callable Script Include
+var testInclude = Class.create();
+testInclude.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+	functionName: function() {
+		var param1 = this.getParameter('sysparm_passIN'); // Name of parameter, always starts with sysparam_		
+		return 'Hello ' + param1;
+	}, // Dont forget comma after function defination
+	
+    type: 'testInclude'
+});
+
+/*
+
+Client Script onLoad():
+
+var ga = new GlideAjax('testInclude');
+ga.addParam('sysparm_name','functionName');
+ga.addParam('sysparm_passIN','Devin'); 
+ga.getXMLAnswer(callBackFunction); 
+
+function callBackFunction(response) { 
+	alert(response);
+}
+
+*/]]></script>
+<sys_class_name>sys_script_include</sys_class_name>
+<sys_created_by>devin.valencia</sys_created_by>
+<sys_created_on>2020-10-20 13:44:03</sys_created_on>
+<sys_id>05f3935c1b046c1059c199361a4bcb38</sys_id>
+<sys_mod_count>19</sys_mod_count>
+<sys_name>testInclude</sys_name>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sys_script_include_05f3935c1b046c1059c199361a4bcb38</sys_update_name>
+<sys_updated_by>devin.valencia</sys_updated_by>
+<sys_updated_on>2020-11-09 17:30:44</sys_updated_on>
+</sys_script_include>
+</unload>

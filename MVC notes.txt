@@ -1,0 +1,60 @@
+MVC (Models Veiw Controller (Router))
+- Models = Object class with Properties
+	ex) Customers --> public int id {get; set;}
+
+- View = HTML view of controller action result
+
+- Controller = Class for model object that contains the actions
+	ex) CustomersController --> ActionResult() { ...update record..}
+
+- Router = Dictates which controller class is called depending on url
+	ex) {controller}/{action}/{id}
+
+URL: Movies/Find/1
+MVC = Call Controller Class named Movies, call method Find() and pass id 1 into method
+
+For each Model, there should be a controller and view
+Shared folder, views that can be used across classes
+
+When setting up controller, be sure to include:
+using ProjectName.Models;
+
+1) Model (Object)
+	- In Models folder, create class w. Model name
+
+2) Controller (Actions Caller)
+	- In Controller folder, create controller with [ModelName]Controller.cs
+	- Use shared Layout Page
+	- Return an instance of class that derives from ActionResult
+	- Call view method, creates view result (this is Type of ActionResult, each has helper method like View())
+	- Actionresult = output of action
+	- ActionParameters = input {controller}/{action}/{id}
+	- string x = @"\d{4}" --> This is called a "Verbatum string" , doesn't require escapes, good for regex
+	- routes.MapMvcAttributeRoutes();
+
+3) View (HTML view)
+	- Create view for model with same name, then create view with layout using shared folder template
+
+To change template, look for bootstrap as frontend css framework
+
+4) Custom Route
+	- RouteConfig.cs
+	- Define specific to most generic, top to bottom
+	- new { } = "Annonmymous object?
+	- In RouteConfig, call method routes.MapMvcAttributeRoutes();
+	- In controller, define using regex string ex)
+	--- [Route("movies/released/{year:regex(\\d{4}:range(1900,3000)}/{month:regex(\\d{4}):range(1,12)}")]
+
+5) Passing Data to Views
+	- in ActionResult method, return View(Domain Model/Object)
+
+6) View Models (HTML)
+	- Need to be able to pass multiple models into a view
+	- Solution = ViewModel = Model built for view
+	- Can write C# code by prefixing line or block @{ ... } with @ symbol
+	- Can also write html code in blocks where prefix exsists (RazorView Engine Parses)
+	- 
+	- 
+
+
+

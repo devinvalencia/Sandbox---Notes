@@ -1,0 +1,130 @@
+<!--
+  VS Emmet shortcuts:
+  ! = Typing this then enter creates standard page
+  tagName#idName = auto creates tag with id name
+  lorem30 or lorem20 = creates a sample paragraph
+
+  Class vs ID?
+  Classes can repeat :: IDs can't repeat
+
+  Div vs Span?
+  Block level (knocks next html elements to next line) :: Inline level
+
+  Entities = example, &nbsp (non-breaking space)
+
+  Semantic Tags = for people with disablities, purely semantic and organization
+
+  HTML Atts = elements for each tag
+
+  Google Chrome: f12 -> Elements to view html, Style to view css 
+
+
+
+  ~~ CSS NOTES ~~
+  #idName, .... { property:value; } // ID selector
+  .className, ... { property:value; } // Class selector
+  elementName {property:value;}   // HTML Elements dont need . or # in CSS
+  #idName p { property:value; } // Nested selector, selects element in ID or class
+
+  * FONTS
+  font-family: Name1, Name2, Name3; // Use font stacks, can get more from google.fonts
+  px = 1/96 of 1" = Absolute Units vs Relative (%, em, rem, vw, vh)
+
+  * COLORS
+  .className {color: red; } // limited
+  .className {color: rgb(255,0,0); } // 255 max for each
+  .className {color: #ffffff } // 3-6 characters (0-9 & A-F), broken down like RGB: ff0000 = RED, 00ff00 = GREEN, 0000ff = BLUE, when all characters same, can use just 3, example ffffff = fff (same)
+
+  color changes font color
+  Use color-hex.com
+
+ * BG & BORDERS
+  keep in seperate folder
+  png can have transparency, jpegs cannot
+
+  .className {
+  background: url("./localLocation"); // ./ = represents currenct directory
+  backgroun-repeat: no-repeat;
+  background-position: 100px 0; // (x,y) moves image over according to pixels, use negative values to shift image in wrapper while keeping contained in wrapper, can also except (center center)
+  background-size: cover; // Whole image will display in wrapper
+  height: 300px;
+  width: 600px;
+  }
+  Change height and width of image by changing the size of the wrapper its in
+  also possible to put all inputs into single property, below
+
+  .className {
+    background: url("") no-repeat center center/cover; // entering the / is for size para
+  }
+
+ background-attachment: fixed; // keep image in single location, attach to browser
+
+  Both below are same, border wont be made without all 3 parameters specified
+
+.className {
+  border-width: 3px;
+  border-color: red;
+  border-style: solid;
+}
+
+.className {
+  border: 3px solid red;
+}
+
+can do border-top, bottom, left, right so only one side has it
+
+border-radius: 10px; // creates rounded corners
+border-top-left-radius: 10px; // rounds off certain corner 
+
+BOX, MARGINS & PADDING
+Margin vs Padding = Margin outside border :: Padding in between element and border
+[ Margin [ Border [ Padding [ Element]
+
+Each element has default browser style determined by browser
+
+CSS Reset removes default styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // when adding padding, will increase wrapper sizes, this property prevents that, pushes elements more in
+}
+// selects everything
+
+can pad and margin sides of wrapper individually or together, if done together then the order is top, right, bottom, left (clockwise)
+
+* ALIGNMENT
+text-align: justify; keeps text squarish
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href = "testerstyle.css">
+  <title>Document</title>
+</head>
+<body>
+  <button a href="www.google.com">Click Me</button>
+  <div class="all">
+    <div class = "box" id = "box1">
+      <h3>Title</h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quaerat provident consequatur vel eveniet, in, ullam suscipit distinctio tempore ex voluptatum eos id numquam ipsa minima quo vitae recusandae officiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis explicabo saepe fugiat aliquam accusantium iure a eligendi voluptate, eaque animi cupiditate unde quasi nemo omnis, velit cum. Ad, autem sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dolorum minus. Necessitatibus voluptate provident fugit sapiente. Nostrum iusto debitis distinctio cum nobis nam, autem aut dolorum illum architecto, eius fuga.
+    </div>
+    <div class = "box" id = "box2">
+      <h3>Title</h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quaerat provident consequatur vel eveniet, in, ullam suscipit distinctio tempore ex voluptatum eos id numquam ipsa minima quo vitae recusandae officiis? Lorem .
+    </div>
+    <div class="clr"></div>
+    <div class = "box" id = "box3">
+      <h3>Title</h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quaerat provident consequatur vel eveniet, in, ullam suscipit distinctio tempore ex voluptatum eos id numquam ipsa minima quo vitae recusandae officiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis explicabo saepe fugiat aliquam accusantium iure a eligendi voluptate, eaque animi cupiditate unde quasi nemo omnis, velit cum. Ad, autem sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dolorum minus. Necessitatibus voluptate provident fugit sapiente. Nostrum iusto debitis distinctio cum nobis nam, autem aut dolorum illum architecto, eius fuga.
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+GitHub
+toStart(): Pull Request (opt) > Clone > Commit > Push
+
+Fork: Copy your own version of a repo
+Clone: Bring repo to local machine
+Branch: Split current branch
+Commit: records changes locally
+Pull: Sync current branch with remote repo
+Push: Updates remote repo branch
+Merge: Branch merged with main
+Pull Request: Asks to merge forked repo or branch with repo/branch originally forked/branched from
+
+ctrl+shift+P 
+Command Pallete in Visual Studio
+
+No way to merge branches in ServiceNow Studio
+Have to do in GitHub
+
+1) New Pull Request
+2) Master <-- Branch_Name
+3) Merge Pull Request
+* Use same method to merge branches for other repos
+
+! = Creates HTML Body in Emet

@@ -1,0 +1,66 @@
+<!-- How to turn inline items into block
+
+  Changing block to inline and vice versa
+  For centering in page, make sure display: block
+
+  Cant use width on inline, solution is inline block
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+li {
+  display: inline;
+}
+
+li a {
+  padding-right: 20px;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+.box {
+  background: gray;
+  width: 32%;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="@">Tech</a></li> 
+    <li><a href="@">Tech</a></li>
+    <li><a href="@">Tech</a></li>
+  </ul>
+
+  <br><br><br>
+  
+  <img src = "./logo.png">
+
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloremque praesentium, animi sit doloribus laudantium consequuntur ab harum dolorum earum quaerat nostrum dicta voluptatem, assumenda, ratione atque perferendis. Modi, adipisci!</p>
+  </div>
+
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloremque praesentium, animi sit doloribus laudantium consequuntur ab harum dolorum earum quaerat nostrum dicta voluptatem, assumenda, ratione atque perferendis. Modi, adipisci!</p>
+  </div>
+
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloremque praesentium, animi sit doloribus laudantium consequuntur ab harum dolorum earum quaerat nostrum dicta voluptatem, assumenda, ratione atque perferendis. Modi, adipisci!</p>
+  </div>
+</body>
+</html>
