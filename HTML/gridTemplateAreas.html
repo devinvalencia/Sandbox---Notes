@@ -4,8 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+<style>
+
+.grid {
+  display: grid;
+  grid-template-areas: 'header header header'
+                        'sidebar content1 content2'
+                        'sidebar content3 content3'; /*setup for parent cntnr, use any string value for each, then setup each to be inheritted */
+}
+
+.item1 {
+  grid-area: header; /* setup for child ctnr, no quotes, use values from template-areas*/
+  height: 1fr; 
+  border: solid;
+}
+
+.item2 {
+  grid-area: sidebar;
+  height:1fr;
+  border: solid;
+}
+
+.item3 {
+  grid-area: content1;
+  height:1fr;
+  border: solid;
+}
+
+.item4 {
+  grid-area: content2;
+  height:1fr;
+  border: solid;
+}
+
+.item5 {
+  grid-area: content3;
+  height:1fr;
+  border: solid;
+}
+</style>
 </head>
 <body>
+  <div class="grid">
+    <div class="item1">Item 1</div>
+    <div class="item2">Item 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam iusto sapiente qui dicta in non aspernatur ipsum accusamus. Repellat, modi adipisci eius et ipsam sit molestias. Cupiditate, deleniti quisquam.</div>
+    <div class="item3">Item 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus itaque quia facere totam, architecto error porro provident illum voluptatem quos.</div>
+    <div class="item4">Item 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aperiam soluta praesentium asperiores magnam dolorum nulla officiis sunt, voluptas corporis!</div>
+    <div class="item5">Item 5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur distinctio officia fugit eos perspiciatis in reiciendis placeat voluptatibus deserunt optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolores, distinctio quaerat a incidunt, placeat odit omnis delectus sunt minus vero laboriosam unde deserunt, sapiente possimus. A ea magni perspiciatis.</div>
+  </div>
+
   
 </body>
 </html>
